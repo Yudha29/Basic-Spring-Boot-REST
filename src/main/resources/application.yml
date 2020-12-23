@@ -1,0 +1,11 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/spring-boot-postgres-db
+    username: postgres
+    password: password
+    pool-size: 30
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
