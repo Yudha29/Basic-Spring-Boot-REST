@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Repository("fakeDao")
 public class FakePersonDataAccessService implements PersonDao {
-    private static List<Person> DB = new ArrayList<Person>();
+    private final static List<Person> DB = new ArrayList<Person>();
 
     @Override
     public int insertPerson(UUID id, Person person) {
