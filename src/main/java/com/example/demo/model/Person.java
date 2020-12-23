@@ -8,7 +8,7 @@ import java.util.UUID;
 public class Person {
     private final UUID id;
 
-    @NotEmpty(message = "{validation.name.notEmpty}")
+    @NotEmpty
     private final String name;
 
     public Person(@JsonProperty("id") UUID id,
