@@ -19,8 +19,8 @@ public class PersonService {
         this.personDao = personDao;
     }
 
-    public int addPerson(Person person) {
-        return personDao.insertPerson(person);
+    public void addPerson(Person person) {
+        personDao.insertPerson(person);
     }
 
     public List<Person> getAllPeople() {
@@ -29,5 +29,13 @@ public class PersonService {
 
     public Optional<Person> getPerson(UUID id) {
         return personDao.getPerson(id);
+    }
+
+    public void updatePerson(UUID id, Person person) {
+        personDao.updatePerson(id, person);
+    }
+
+    public void deletePerson(UUID id) {
+        personDao.deletePerson(id);
     }
 }

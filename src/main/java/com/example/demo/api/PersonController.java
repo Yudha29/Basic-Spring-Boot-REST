@@ -32,4 +32,19 @@ public class PersonController {
 
     @GetMapping(path = "{id}")
     public Optional<Person> getPerson(@PathVariable UUID id) { return personService.getPerson(id); }
+
+    /**
+     * Controller to update person data
+     * @param id path variable
+     * @param person request body data
+     */
+    @PutMapping(path = "{id}")
+    public void updatePerson(@PathVariable UUID id, @RequestBody Person person) {
+        personService.updatePerson(id, person);
+    }
+
+    @DeleteMapping(path = "{id}")
+    public void deletePerson(@PathVariable UUID id) {
+        personService.deletePerson(id);
+    }
 }
